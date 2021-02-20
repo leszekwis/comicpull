@@ -21,7 +21,7 @@ private static final Logger log = LoggerFactory.getLogger(App.class);
     // add Jackson
     install(new JacksonModule());
 
-    get("/", ctx -> "Welcome to Jooby!");
+    get("/", ctx -> "Welcome to ComicPull!");
 
     get("/comics", ctx -> {
       log.info("getting all comics");

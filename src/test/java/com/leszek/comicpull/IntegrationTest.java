@@ -31,7 +31,7 @@ public class IntegrationTest {
         .build();
 
     try (Response rsp = client.newCall(req).execute()) {
-      assertEquals("Welcome to Jooby!", rsp.body().string());
+      assertEquals("Welcome to ComicPull!", rsp.body().string());
       assertEquals(StatusCode.OK.value(), rsp.code());
     }
   }

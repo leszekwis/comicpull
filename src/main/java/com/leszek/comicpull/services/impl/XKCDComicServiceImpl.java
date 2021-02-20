@@ -30,6 +30,7 @@ public class XKCDComicServiceImpl implements ComicService {
      */
     @Override
     public List<Comic> getComics() {
+        log.info("getting xkcd comics");
         List<Comic> comics = new ArrayList<>();
         String specificComicUrl = conf.getString("xkcdNumUrl");
         JsonNode latestComic = getLatestComic();
@@ -45,6 +46,7 @@ public class XKCDComicServiceImpl implements ComicService {
             }
 
         }
+        log.info("got {} xkcd comics", comics.size());
         return comics;
     }
 
@@ -56,6 +58,7 @@ public class XKCDComicServiceImpl implements ComicService {
      */
     @Override
     public Comic getComicFromJson(JsonNode pJson) {
+        log.info("getting comic from json: {}", pJson);
         Calendar cal = Calendar.getInstance();
         // xkcd comics dont have a publishing time only date so set it to start of the day;
         cal.set(pJson.get("year").asInt(), pJson.get("month").asInt()-1, pJson.get("day").asInt(),0, 0, 0);

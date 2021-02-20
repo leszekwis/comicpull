@@ -55,4 +55,14 @@ public class Comic implements Serializable {
     public void setPublicationDate(Date publicationDate) {
         this.publicationDate = publicationDate;
     }
+
+    @Override
+    public String toString() {
+        return "Comic{" +
+                "title='" + title + '\'' +
+                ", imgUrl='" + imgUrl + '\'' +
+                ", webUrl='" + webUrl + '\'' +
+                ", publicationDate=" + publicationDate +
+                '}';
+    }
 }

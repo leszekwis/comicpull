@@ -33,6 +33,8 @@ dependencyManagement {
 dependencies {
   implementation "io.jooby:jooby-netty"
   implementation "ch.qos.logback:logback-classic"
+  implementation "io.jooby:jooby-guice:$joobyVersion"
+  implementation "io.jooby:jooby-jackson:$joobyVersion"
 
   testImplementation "org.junit.jupiter:junit-jupiter-api"
   testImplementation "org.junit.jupiter:junit-jupiter-engine"

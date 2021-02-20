@@ -8,7 +8,7 @@ RUN gradle shadowJar
 
 FROM openjdk:11-jdk-slim
 WORKDIR /comicpull
-COPY --from=build /comicpull/build\libs\comicpull-0.0.1-all.jar app.jar
+COPY --from=build /comicpull/build/libs/comicpull-0.0.1-all.jar app.jar
 COPY conf conf
 EXPOSE 8080
 CMD ["java", "-jar", "app.jar"]
